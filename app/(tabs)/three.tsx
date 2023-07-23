@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { Pressable, StyleSheet } from "react-native";
 import { Link } from "expo-router";
 
 import EditScreenInfo from "@/components/EditScreenInfo";
@@ -6,7 +6,7 @@ import { Text, View } from "@/components/Themed";
 
 export default function TabThreeScreen() {
   return (
-    <View style={styles.container}>
+    <View className="flex-1 items-center justify-center">
       <Text style={styles.title}>Tab Three</Text>
       <View
         style={styles.separator}
@@ -17,6 +17,9 @@ export default function TabThreeScreen() {
       <Link href="/">
         <Text style={styles.title}>Go</Text>
       </Link>
+      <Pressable className="active:bg-cyan-500 p-4 rounded-2xl">
+        <Text className="text-yellow-900">Button</Text>
+      </Pressable>
     </View>
   );
 }
